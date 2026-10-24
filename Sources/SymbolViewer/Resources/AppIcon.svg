@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <!-- Background Gradient: Deep Apple Royal Blue & Indigo -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6" />
+      <stop offset="50%" stop-color="#1D4ED8" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+
+    <!-- Lens Glass Gradient -->
+    <linearGradient id="lensGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#1E3A8A" stop-opacity="0.65" />
+    </linearGradient>
+
+    <!-- Subtle Inner Border for macOS Squircle -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.1" />
+    </linearGradient>
+
+    <!-- Clean Flat Shadow -->
+    <filter id="macDropShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#020617" flood-opacity="0.45" />
+    </filter>
+
+    <!-- Squircle Shadow -->
+    <filter id="squircleShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#000000" flood-opacity="0.3" />
+    </filter>
+  </defs>
+
+  <!-- macOS App Icon Squircle Base (824x824 at center (100, 100), rx=185) -->
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#bgGrad)" filter="url(#squircleShadow)" />
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="none" stroke="url(#borderGrad)" stroke-width="4" />
+
+  <!-- Large Magnifying Glass (Occupies most of the icon) -->
+  <g filter="url(#macDropShadow)">
+    <!-- Handle -->
+    <line x1="650" y1="650" x2="815" y2="815" stroke="#FFFFFF" stroke-width="50" stroke-linecap="round" />
+    <line x1="650" y1="650" x2="815" y2="815" stroke="#E2E8F0" stroke-width="26" stroke-linecap="round" opacity="0.3" />
+
+    <!-- Lens Outer Ring -->
+    <circle cx="465" cy="465" r="280" fill="none" stroke="#FFFFFF" stroke-width="42" />
+
+    <!-- Lens Inner Glass -->
+    <circle cx="465" cy="465" r="259" fill="url(#lensGrad)" />
+    
+    <!-- Subtle Lens Highlight Reflection (Flat Arc) -->
+    <path d="M 285 410 A 220 220 0 0 1 450 255" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" opacity="0.35" />
+
+    <!-- Stylized "SF" Monogram in the Center -->
+    <g id="sf-monogram" fill="#FFFFFF">
+      <!-- "S" glyph: crafted with precision bold geometry -->
+      <!-- Top curve of S -->
+      <path d="M 410 375 C 410 335 375 330 345 330 C 305 330 270 345 270 385 C 270 450 410 445 410 520 C 410 575 365 600 325 600 C 275 600 250 565 250 525 L 298 525 C 298 550 315 562 332 562 C 355 562 368 548 368 525 C 368 470 230 470 230 388 C 230 330 275 292 342 292 C 400 292 452 322 452 380 Z" />
+      
+      <!-- "F" glyph: bold modern stem and bars, harmonized with S -->
+      <!-- Vertical stem -->
+      <rect x="475" y="296" width="46" height="300" rx="8" />
+      <!-- Top bar -->
+      <path d="M 475 296 L 635 296 C 642 296 648 302 648 310 L 648 334 C 648 342 642 348 635 348 L 521 348 L 521 426 L 610 426 C 617 426 623 432 623 440 L 623 464 C 623 472 617 478 610 478 L 521 478 L 521 596 L 475 596 Z" />
+    </g>
+  </g>
+</svg>
